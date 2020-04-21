@@ -1,17 +1,35 @@
 #include "Circle.h"
 
 Circle::Circle(float x, float y, float r) : Object(x, y), shape(r) {
-    shape.setPosition(loc.getX() - shape.getRadius(), loc.getY() - shape.getRadius());
+    shape.setPosition(x - r, y - r);
 }
 
 Circle::Circle(const Vector2D &v, float r) : Circle(v.getX(), v.getY(), r) {}
+
+void Circle::display(sf::RenderWindow &w) const {
+    w.draw(shape);
+}
+
+void Circle::fill(int r, int g, int b) {
+    shape.setFillColor(sf::Color(r, g, b));
+}
+
+void Circle::strokeWeight(float d) {
+    shape.setOutlineThickness(d);
+}
+
+void Circle::stroke(int r, int g, int b) {
+    shape.setOutlineColor(sf::Color(r, g, b));
+}
 
 void Circle::setR(float r) {
     shape.setRadius(r);
 }
 
-void Circle::display(sf::RenderWindow &w) {
-    w.draw(shape);
+void Circle::setLoc(float x, float y) {
+    loc.setX(x);
+    loc.setY(y);
+    shape.setPosition(loc.getX() - shape.getRadius(), loc.getY() - shape.getRadius());
 }
 
-void Circle::rotate(float angle) {}
+void Circle::rotate(float angle) { return; }

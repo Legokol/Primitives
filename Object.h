@@ -12,7 +12,13 @@ public:
 
     Object(const Vector2D &v);
 
-    virtual void display(sf::RenderWindow &w) = 0;
+    virtual void display(sf::RenderWindow &w) const = 0;
+
+    virtual void fill(int r, int g, int b) = 0;
+
+    virtual void strokeWeight(float d) = 0;
+
+    virtual void stroke(int r, int g, int b) = 0;
 
     virtual void rotate(float angle) = 0;
 
@@ -20,11 +26,15 @@ public:
 
     void setLoc(const Vector2D &v);
 
-    void setLoc(float x, float y);
+    virtual void setLoc(float x, float y) = 0;
 
     void setX(float x);
 
     void setY(float y);
+
+    float getX() const;
+
+    float getY() const;
 };
 
 
