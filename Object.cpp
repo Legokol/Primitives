@@ -1,4 +1,5 @@
 #include "Object.h"
+
 using namespace std;
 
 Object::Object(float x, float y) : loc(x, y) {}
@@ -11,6 +12,11 @@ void Object::move(const Vector2D &v) {
 
 void Object::setLoc(const Vector2D &v) {
     loc = v;
+}
+
+void Object::setLoc(float x, float y) {
+    loc.setX(x);
+    loc.setY(y);
 }
 
 void Object::setX(float x) {
