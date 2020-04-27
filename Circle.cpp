@@ -14,14 +14,6 @@ void Circle::fill(int r, int g, int b) {
     shape.setFillColor(sf::Color(r, g, b));
 }
 
-void Circle::strokeWeight(float d) {
-    shape.setOutlineThickness(d);
-}
-
-void Circle::stroke(int r, int g, int b) {
-    shape.setOutlineColor(sf::Color(r, g, b));
-}
-
 void Circle::setR(float r) {
     shape.setRadius(r);
 }

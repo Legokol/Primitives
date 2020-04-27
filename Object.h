@@ -2,6 +2,7 @@
 #define PRIMITIVES_OBJECT_H
 
 #include "vector2D.hpp"
+#include <cmath>
 #include <SFML/graphics.hpp>
 
 class Object {
@@ -15,10 +16,6 @@ public:
     virtual void display(sf::RenderWindow &w) const = 0;
 
     virtual void fill(int r, int g, int b) = 0;
-
-    virtual void strokeWeight(float d) = 0;
-
-    virtual void stroke(int r, int g, int b) = 0;
 
     virtual void rotate(float angle) = 0;
 
