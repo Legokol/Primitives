@@ -20,6 +20,8 @@ public:
     void rotate(float angle) override;
 
     void setR(float r);
+
+    float getR() const;
 };
 
 

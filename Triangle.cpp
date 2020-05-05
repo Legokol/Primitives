@@ -26,7 +26,15 @@ void Triangle::setLoc(float x, float y) {
 }
 
 void Triangle::rotate(float angle) {
-    a.rotate_R(angle);
-    b.rotate_R(angle);
+    a.rotate_L(angle);
+    b.rotate_L(angle);
     setLoc(loc.getX(), loc.getY());
+}
+
+Vector2D Triangle::getA() const {
+    return a;
+}
+
+Vector2D Triangle::getB() const {
+    return b;
 }

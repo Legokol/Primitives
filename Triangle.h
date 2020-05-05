@@ -17,6 +17,10 @@ public:
     void setLoc(float x, float y) override;
 
     void rotate(float angle) override;
+
+    Vector2D getA() const;
+
+    Vector2D getB() const;
 };
 
 

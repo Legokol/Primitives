@@ -30,8 +30,8 @@ void Rectangle::setLoc(float x, float y) {
 }
 
 void Rectangle::rotate(float angle) {
-    a.rotate_R(angle);
-    b.rotate_R(angle);
+    a.rotate_L(angle);
+    b.rotate_L(angle);
     setLoc(loc.getX(), loc.getY());
 }
 
@@ -45,4 +45,12 @@ void Rectangle::setB(float _b) {
     float l = sqrt(b.getX() * b.getX() + b.getY() * b.getY());
     b = b * (_b/ l);
     setLoc(loc.getX(), loc.getY());
+}
+
+Vector2D Rectangle::getA() const {
+    return a;
+}
+
+Vector2D Rectangle::getB() const {
+    return b;
 }

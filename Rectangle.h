@@ -23,6 +23,10 @@ public:
     void setA(float _a);
 
     void setB(float _b);
+
+    Vector2D getA() const;
+
+    Vector2D getB() const;
 };
 
 

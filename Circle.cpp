@@ -18,6 +18,10 @@ void Circle::setR(float r) {
     shape.setRadius(r);
 }
 
+float Circle::getR() const {
+    return shape.getRadius();
+}
+
 void Circle::setLoc(float x, float y) {
     loc.setX(x);
     loc.setY(y);
