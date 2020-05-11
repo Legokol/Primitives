@@ -8,19 +8,19 @@ protected:
     sf::VertexArray shape = sf::VertexArray(sf::Triangles, 3);
     Vector2D a, b;
 public:
-    Triangle(float x1, float y1, float x2, float y2, float x3, float y3);
+    Triangle(double x1, double y1, double x2, double y2, double x3, double y3);
 
     void display(sf::RenderWindow &w) const override;
 
     void fill(int r, int g, int b) override;
 
-    void setLoc(float x, float y) override;
+    void setLoc(double x, double y) override;
 
-    void rotate(float angle) override;
+    void rotate(double angle) override;
 
-    void setA(float _a);
+    void setA(double _a);
 
-    void setB(float _b);
+    void setB(double _b);
 
     Vector2D getA() const;
 

@@ -6,22 +6,23 @@
 class Circle : public Object {
 protected:
     sf::CircleShape shape;
+    double r;
 public:
-    Circle(float x, float y, float r);
+    Circle(double x, double y, double _r);
 
-    Circle(const Vector2D &v, float r);
+    Circle(const Vector2D &v, double _r);
 
     void display(sf::RenderWindow &w) const override;
 
     void fill(int r, int g, int b) override;
 
-    void setLoc(float x, float y) override;
+    void setLoc(double x, double y) override;
 
-    void rotate(float angle) override;
+    void rotate(double angle) override;
 
-    void setR(float r);
+    void setR(double _r);
 
-    float getR() const;
+    double getR() const;
 };
 
 

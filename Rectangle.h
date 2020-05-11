@@ -8,21 +8,21 @@ protected:
     sf::VertexArray shape = sf::VertexArray(sf::Quads, 4);
     Vector2D a, b;
 public:
-    Rectangle(float x, float y, float a, float b);
+    Rectangle(double x, double y, double _a, double _b);
 
-    Rectangle(const Vector2D &v, float a, float b);
+    Rectangle(const Vector2D &v, double _a, double _b);
 
     void display(sf::RenderWindow &w) const override;
 
     void fill(int r, int g, int b) override;
 
-    void setLoc(float x, float y) override;
+    void setLoc(double x, double y) override;
 
-    void rotate(float angle) override;
+    void rotate(double angle) override;
 
-    void setA(float _a);
+    void setA(double _a);
 
-    void setB(float _b);
+    void setB(double _b);
 
     Vector2D getA() const;
 

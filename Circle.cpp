@@ -1,12 +1,13 @@
 #include "Circle.h"
 
 //x, y - положение круга, r - радиус
-Circle::Circle(float x, float y, float r) : Object(x, y), shape(r) {
-    shape.setPosition(x - r, y - r);
+Circle::Circle(double x, double y, double _r) : Object(x, y), shape(_r) {
+    r = _r;
+    shape.setPosition(x - _r, y - _r);
 }
 
 //v - положение круга, r - радиус
-Circle::Circle(const Vector2D &v, float r) : Circle(v.getX(), v.getY(), r) {}
+Circle::Circle(const Vector2D &v, double _r) : Circle(v.getX(), v.getY(), _r) {}
 
 void Circle::display(sf::RenderWindow &w) const {
     w.draw(shape);
@@ -17,20 +18,21 @@ void Circle::fill(int r, int g, int b) {
 }
 
 //делает радиус круга равным r
-void Circle::setR(float r) {
-    shape.setRadius(r);
+void Circle::setR(double _r) {
+    r = _r;
+    shape.setRadius(_r);
 }
 
 //возвращает величину радиуса круга
-float Circle::getR() const {
-    return shape.getRadius();
+double Circle::getR() const {
+    return r;
 }
 
-void Circle::setLoc(float x, float y) {
+void Circle::setLoc(double x, double y) {
     loc.setX(x);
     loc.setY(y);
     shape.setPosition(loc.getX() - shape.getRadius(), loc.getY() - shape.getRadius());
 }
 
 //ну круг же нельзя крутить, что за бред?
-void Circle::rotate(float angle) { return; }
+void Circle::rotate(double angle) { return; }

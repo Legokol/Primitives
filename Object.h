@@ -1,7 +1,7 @@
 #ifndef PRIMITIVES_OBJECT_H
 #define PRIMITIVES_OBJECT_H
 
-#include "vector2D.hpp"
+#include "Vector2D.h"
 #include <cmath>
 #include <SFML/graphics.hpp>
 
@@ -9,7 +9,7 @@ class Object {
 protected:
     Vector2D loc;
 public:
-    Object(float x, float y);
+    Object(double x, double y);
 
     Object(const Vector2D &v);
 
@@ -17,21 +17,21 @@ public:
 
     virtual void fill(int r, int g, int b) = 0;
 
-    virtual void rotate(float angle) = 0;
+    virtual void rotate(double angle) = 0;
 
     void move(const Vector2D &v);
 
     void setLoc(const Vector2D &v);
 
-    virtual void setLoc(float x, float y) = 0;
+    virtual void setLoc(double x, double y) = 0;
 
-    void setX(float x);
+    void setX(double x);
 
-    void setY(float y);
+    void setY(double y);
 
-    float getX() const;
+    double getX() const;
 
-    float getY() const;
+    double getY() const;
 };
 
 

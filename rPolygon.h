@@ -7,13 +7,13 @@ class rPolygon : public Circle {
 protected:
     Vector2D center;
 public:
-    rPolygon(float x, float y, float r, int n);
+    rPolygon(double x, double y, double r, int n);
 
-    rPolygon(const Vector2D &v, float r, int n);
+    rPolygon(const Vector2D &v, double r, int n);
 
-    void rotate(float angle) override;
+    void rotate(double angle) override;
 
-    void setLoc(float x, float y) override;
+    void setLoc(double x, double y) override;
 };
 
 
